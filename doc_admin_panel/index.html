@@ -1,0 +1,283 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Android News App 3.0.0 - Admin Panel Configuration</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Solodroid Developer">
+	<meta name="copyright" content="Solodroid Developer">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2018-03-31T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	<script>
+		$(function() {
+       $('a[href*="#"]:not([href="#"])').click(function() {
+         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+           var target = $(this.hash);
+           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html, body').animate({
+               scrollTop: target.offset().top
+             }, 300);
+             return false;
+           }
+         }
+       });
+     });
+	</script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_6.png);}
+		a{color:#008C9E;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #008C9E, #006673);
+			  background-image: -ms-linear-gradient(top, #008C9E, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+			  background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+			  background-image: -o-linear-gradient(top, #008C9E, #006673);
+			  background-image: linear-gradient(top, #008C9E, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #008C9E #008C9E #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-android-news-app-300">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#about_the_files" title="About the Files">About the Files</a></li>
+			<li><a href="#getting_started" title="Getting Started">Getting Started</a></li>
+			<li><a href="#database_creation" title="Database Creation">Database Creation</a></li>
+			<li><a href="#import_database_sql_file" title="Import Database .sql file">Import Database .sql file</a></li>
+			<li><a href="#upload_php_scripts_and_database_configuration" title="Upload PHP Scripts and Database Configuration">Upload PHP Scripts and Database Configuration</a></li>
+			<li><a href="#rtl_right_to_left_mode" title="RTL (Right To Left) Mode">RTL (Right To Left) Mode</a></li>
+			<li><a href="#check_database_connection" title="Check Database Connection">Check Database Connection</a></li>
+			<li><a href="#rating" title="Rating">Rating</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Solodroid Developer 2018<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Android News App 3.0.0</h1>
+	<h2>Admin Panel Configuration</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 03/23/2015</li>
+	<li>latest update: 03/31/2018</li>
+	<li>by: Solodroid Developer</li>
+	<li><a href=""></a></li>
+	<li>email: <a href="mailto:&#100;&#101;&#118;&#101;&#108;&#111;&#112;&#101;&#114;&#46;&#115;&#111;&#108;&#111;&#100;&#114;&#111;&#105;&#100;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#101;&#118;&#101;&#108;&#111;&#112;&#101;&#114;&#46;&#115;&#111;&#108;&#111;&#100;&#114;&#111;&#105;&#100;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p>Thank you for purchasing my app. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here. Thanks so much!</p>
+	</section>
+	
+	<section id="about_the_files">
+	<div class="page-header"><h3>About the Files</h3><hr class="notop"></div>
+<p style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
+	Android News App is a mobile news system which run under Android platform that used for your own news application. With powerful and Responsive Admin Panel can manage news category, news item, app profile information, change admin username and password with generate password, etc. This application created by Android for client side and then PHP MySQL for Admin side. Run under Android platform which is the most popular operating system in the world. Using this application you can save your money and time in creating application for your own news application.</p>
+</section>
+<section id="getting_started">
+	<div class="page-header"><h3>Getting Started</h3><hr class="notop"></div>
+<div>
+	<div>
+		<div>
+			Before doing installation, you need to do the following things :</div>
+		<div>
+			&nbsp;</div>
+		<div>
+			Have a web hosting to store admin panel files and Mysql database, to run this admin panel, web hosting that you use must have the following requirements :</div>
+		<ul>
+			<li>
+				PHP Version 5.4, 5.5 or 5.6</li>
+			<li>
+				Support Mysqli</li>
+			<li>
+				Support PDO</li>
+		</ul>
+		<div>
+			&nbsp;</div>
+		<div>
+			Because this documentation using cpanel, a web hosting with cpanel is recommended. If you don not have web hosting or domain, you can check on this sample site which provide hosting and domain service :</div>
+		<div>
+			&nbsp;</div>
+		<div>
+			<div>
+				Free web hosting &amp; domain services :</div>
+			<ul>
+				<li>
+					<a href="https://www.000webhost.com/">000webhost</a></li>
+			</ul>
+			<div>
+				&nbsp;</div>
+			<div>
+				Premium web hosting &amp; domain services (Highly Recommend) :</div>
+			<ul>
+				<li>
+					<a href="https://my.hawkhost.com/aff.php?aff=8389">Hawkhost</a></li>
+				<li>
+					<a href="https://www.hostgator.com/web-hosting">Hostgator</a></li>
+				<li>
+					<a href="https://www.domainesia.com/?aff=2161">Domainesia (Indonesian Hosting)</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<p>
+	<img alt="" src="assets/images/image_4.jpg" style="width: 400px; height: 354px;"></p>
+<p>
+	<img alt="" src="assets/images/image_9.jpg" style="width: 1024px; height: 458px;"></p>
+</section>
+<section id="database_creation">
+	<div class="page-header"><h3>Database Creation</h3><hr class="notop"></div>
+<div>
+	<div>
+		<div>
+			1.&nbsp;Login to your cpanel hosting and open&nbsp;<strong>MySQL Databases</strong></div>
+		<div>
+			2.&nbsp;Create database and give database name like you want, as example : &#39;<strong>solodroid_news_db</strong>&rsquo;</div>
+		<div>
+			3. Create user for your database</div>
+		<div>
+			4. Add user to your database and check&nbsp;<strong>ALL PRIVILEGES</strong></div>
+	</div>
+</div>
+<p>
+	<img alt="" src="assets/images/image_10.jpg" style="width: 600px; height: 333px;"></p>
+<p>
+	<img alt="" src="assets/images/image_1.jpg" style="width: 600px; height: 342px;"></p>
+<p>
+	<img alt="" src="assets/images/image_2.jpg" style="width: 600px; height: 533px;"></p>
+</section>
+<section id="import_database_sql_file">
+	<div class="page-header"><h3>Import Database .sql file</h3><hr class="notop"></div>
+<div>
+	<div>
+		<div>
+			1. Open&nbsp;<strong>phpMyAdmin&nbsp;</strong>and select your database</div>
+	</div>
+</div>
+<div>
+	2. Import file database&nbsp;<strong>android_news_app_db.sql</strong> &nbsp;from download package inside &#39;<strong>admin_panel</strong>&#39; folder</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_7.jpg" style="width: 600px; height: 569px;"></div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_5.jpg" style="width: 600px; height: 274px;"></div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_3.jpg" style="width: 195px; height: 216px;"></div>
+</section>
+<section id="upload_php_scripts_and_database_configuration">
+	<div class="page-header"><h3>Upload PHP Scripts and Database Configuration</h3><hr class="notop"></div>
+<div>
+	1. open File Manager via cpanel or ftp server, upload <strong>android_news_app.zip </strong>inside &#39;<strong>admin_panel</strong>&#39; folder to your folder destination on your hosting, then extract it</div>
+<div>
+	2. to change configuration please see<strong> includes/config.php</strong> file</div>
+<div>
+	3. you must edit this data with your own data.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_8.jpg"  ></div>
+<div>
+	&nbsp;</div>
+<div>
+	Default User Login Admin Panel</div>
+<div>
+	Username&nbsp; <strong>&nbsp;: admin</strong></div>
+<div>
+	Password&nbsp; &nbsp; :<strong> admin</strong></div>
+<div>
+	&nbsp;</div>
+</section>
+<section id="rtl_right_to_left_mode">
+	<div class="page-header"><h3>RTL (Right To Left) Mode</h3><hr class="notop"></div>
+<div>
+	1. RTL (Right-to-left) means generally refers to support of languages that are written from right to left, example Language which using RTL mode e.g : Arabic Language, etc, if you want to Enable RTL mode in the admin panel side</div>
+<div>
+	2. see<strong>&nbsp;includes/config.php</strong>&nbsp;file and set value in the&nbsp;<strong>$ENABLE_RTL_MODE = &#39;true&#39;;</strong></div>
+<div>
+	3. if you want to disable RTL mode, set to false value.</div>
+</section>
+<section id="check_database_connection">
+	<div class="page-header"><h3>Check Database Connection</h3><hr class="notop"></div>
+<div>
+	<div>
+		Before you check this make sure that your web hosting able to run .htaccess file&nbsp;</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		1. check database connection, make sure your web response&nbsp;<strong>{&quot;status&quot;:&quot;ok&quot;,&quot;database&quot;:&quot;connected&quot;}&nbsp;</strong></div>
+	<div>
+		2. url format to check database connection :&nbsp;<strong>http://&lt;your_admin_panel_url&gt;/api/check_connection</strong></div>
+</div>
+<p>
+	&nbsp;</p>
+</section>
+<section id="rating">
+	<div class="page-header"><h3>Rating</h3><hr class="notop"></div>
+<p>
+	<span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 18px;">If you like our app, we will highly appreciate if you can provide us a rating of 5. You can rate us from your CodeCanyon Menu &rarr;&nbsp;<strong><a href="http://codecanyon.net/downloads">Download page.</a></strong></span></p>
+<p>
+	&nbsp;</p>
+<hr>
+<p>
+	<span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 18px;">Once again, thank you so much for purchasing this app. As I said at the beginning, I&#39;d be glad to help you if you have any questions relating to this app. No guarantees, but I&#39;ll do my best to assist. If you have a more general question relating to the apps on CodeCanyon, you might consider visiting the &quot;FAQ / Support&quot; section and asking your question in the &quot;Comments&quot; section at CodeCanyon app detail page.</span></p>
+</section>
+
+	</div>
+</body>
+</html>
